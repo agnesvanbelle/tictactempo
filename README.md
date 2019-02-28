@@ -1,4 +1,4 @@
-Tic Tac Tempo <img src="clock.gif" alt="drawing" width="80"/>
+Tic Tac Temp<img src="clock.gif" alt="drawing" width="20"/> Hack
 ==
 
 
