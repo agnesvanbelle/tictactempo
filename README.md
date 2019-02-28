@@ -11,7 +11,7 @@ Main advantages:
 - Not have to remember the stories and their description from a past sprint, as these will be presented to you
 - Not have to remember the exact hours you worked, neither you will have to make sure they sum up to some total amount of hours. This is handled by the code.
 
-#### Installation:  
+### Installation:  
 
 
 ```
@@ -20,7 +20,7 @@ source env/bin/activate
 pip install -r requirements.txt  
 ```
 
-#### Usage:
+### Usage:
 General usage is 
 
 1. You first `get` a .csv file for a sprint. This will contain relevant stories, based on board ID & project IDs. 
@@ -31,7 +31,7 @@ Additionally you can `delete` all logged time for a sprint.
 
 Note one can use the `-h` flag to get help information: `python src/cli.py -h` 
 
-##### `get` : getting worklog data
+#### `get` : getting worklog data
 
 Example command:
 ```
@@ -58,7 +58,7 @@ This results in a csv as the one in the file [myworklog.csv.get_example](myworkl
 It contains the story IDs and their descriptions, and the days of that sprint.  
 If you already logged hours in that sprint, they will also be in the csv, as absolute hours.
 
-##### `put` : putting logged hours
+#### `put` : putting logged hours
 Open the csv file from the previous `get` action and add your time in it.  
 This can be done in 2 ways, absolute and relative:  
 - Absolute: In the bottom rows where the 'day' column is denoting a day, e.g. 'Mon 18-02-2019', you can input a story 'ID'  and the exact 'amount' of hours.
@@ -112,7 +112,7 @@ Are you sure you want to overwrite worklogs for the sprint from Mon 04-02-2019 t
 Enter y/n:
 ``` 
 
-##### ` delete`: deleting logged hours
+#### ` delete`: deleting logged hours
 Example:
 ```
  python src/cli.py delete jira.textkernel.nl vanbelle:<password>  -n 1 -b 52
