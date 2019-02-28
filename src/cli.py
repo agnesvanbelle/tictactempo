@@ -5,7 +5,7 @@ import socket
 from jira_api import JiraInfo
 from main import get, put, delete
 
-parser = argparse.ArgumentParser(description='Tictoc.')
+parser = argparse.ArgumentParser(description='Tictempoc.')
 
   
 # Required positional arguments:

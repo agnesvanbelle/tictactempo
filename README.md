@@ -1,6 +1,5 @@
-
-Tic toc tempo
-===
+Tictempoc
+==
 
 
 <img src="clock.gif" alt="drawing" width="80"/>
@@ -108,22 +107,22 @@ day: Fri 15-02-2019, total hours: 8.00
          issue: SRCHRD-513 amount: 0.0011h comment: "Working on issue SRCHRD-513" date:2019-02-15
          issue: SRCHRD-518 amount: 0.6311h comment: "Working on issue SRCHRD-518" date:2019-02-15
 Total: 80.00h
-Are you sure you want to overwrite worklogs for the sprint from Mon 04-02-2019 to Fri 15-02-2019 with the above?
+Are you sure you want to overwrite worklogs for the sprint from Mon 04-02-2019 to (including) Fri 15-02-2019 with the above?
 Enter y/n:
 ``` 
+Upon pressing `y` the hours in Tempo will be updated an you'll a message after each updated day.
 
 #### ` delete`: deleting logged hours
 Example:
 ```
  python src/cli.py delete jira.textkernel.nl vanbelle:<password>  -n 1 -b 52
 ```
-Just as with the `get` action above, `-n` refers to the number of sprints back, and `-b` refers to the board ID 
+Just as with the `get` action above, `-n` refers to the number of sprints back, and `-b` refers to the board ID.
   
 
 A prompt will be presented, for example:
 ``` 
-Are you sure you want to delete all worklogs for sprint with id 875 between Mon 04-02-2019 and Mon 18-02-2019?
+Are you sure you want to delete all worklogs for sprint with id 875 between Mon 04-02-2019 and Sun 17-02-2019?
 It was 1 sprints back with sprint goal "Improved Match DE/FR ready to be released, ready to implement fully Match Templating".
-You logged 87.99 hours there.
-Enter y/n:
+You logged 79.99 hours there.
 ```

@@ -112,7 +112,7 @@ def put(jira_info, total_hours = None, inputfile = 'workloglog.csv', actually_su
     total_seconds_submitted += b.amount
   print('Total: {:2.2f}h'.format(utils.seconds_to_hours(total_seconds_submitted)))
   
-  resp = input('Are you sure you want to overwrite worklogs for the sprint from {:s} to {:s} with the above?\n'\
+  resp = input('Are you sure you want to overwrite worklogs for the sprint from {:s} to (including) {:s} with the above?\n'\
                'Enter y/n:'.format(utils.datetime_to_human_readable_form(alldates[0]), utils.datetime_to_human_readable_form(alldates[-1])))
   if actually_submit and resp.strip().lower() == 'y':
     existing_worklogs = jira_api.get_existing_worklogs(jira_info, utils.datetime_to_date_string(alldates[0]), 
@@ -138,13 +138,14 @@ def delete(jira_info, negative_sprint_index, board_id, actually_submit=False):
   date_time_start = utils.date_string_to_datetime(earlier_sprint['startDate'].split('T')[0])
   date_time_end = _get_end_date(earlier_sprint)
   existing_worklogs = jira_api.get_existing_worklogs(jira_info, utils.datetime_to_date_string(date_time_start), 
-                                                     utils.datetime_to_date_string(date_time_end))
+                                                     utils.datetime_to_date_string(date_time_end - datetime.timedelta(days=1)))
   total_hours_alread_logged = sum([wl['time'] for wl in existing_worklogs])
 
   resp = input('Are you sure you want to delete all worklogs for sprint with id {:d} between {:s} and {:s}?\n'\
                'It was {:d} sprints back with sprint goal "{:s}".' \
                 '\nYou logged {:2.2f} hours there.\nEnter y/n:'.
-                  format(earlier_sprint_id, utils.datetime_to_human_readable_form(date_time_start), utils.datetime_to_human_readable_form(date_time_end),
+                  format(earlier_sprint_id, utils.datetime_to_human_readable_form(date_time_start),
+                         utils.datetime_to_human_readable_form(date_time_end - datetime.timedelta(days=1)),
                          negative_sprint_index * -1, earlier_sprint_goal, total_hours_alread_logged))
   if actually_submit and resp.strip().lower() == 'y':
     _delete_existing_worklogs(jira_info, existing_worklogs)
