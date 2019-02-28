@@ -108,7 +108,7 @@ Total: 80.00h
 Are you sure you want to overwrite worklogs for the sprint from Mon 04-02-2019 to (including) Fri 15-02-2019 with the above?
 Enter y/n:
 ``` 
-Upon pressing `y` the hours in Tempo will be updated an you'll a message after each updated day.
+Upon pressing `y` the hours in Tempo will be updated and you'll see a message after each updated day.
 
 #### ` delete`: deleting logged hours
 Example:
