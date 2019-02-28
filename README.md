@@ -1,15 +1,13 @@
-Tic Tac Tempo
-
+Tic Tac Tempo <img src="clock.gif" alt="drawing" width="80"/>
 ==
 
 
-<img src="clock.gif" alt="drawing" width="80"/>
 
-Allows you to easily insert per-sprint timesheets in JIRA Tempo, using both relative as well as absolute time estimates.
+Easily insert per-sprint timesheets in JIRA Tempo, using both relative as well as absolute time estimates.
 
 Main advantages:
 - Not have to remember the stories and their description from a past sprint, as these will be presented to you
-- Not have to remember the exact hours you worked, neither you will have to make sure they sum up to some total amount of hours. This is handled by the code.
+- Not have to remember the exact hours you worked, or make them sum up to some total amount of hours. This is handled by the code.
 
 ### Installation:  
 
@@ -25,7 +23,7 @@ General usage is
 
 1. You first `get` a .csv file for a sprint. This will contain relevant stories, based on board ID & project IDs. 
 2. Using a csv editor, in this csv file you put your time estimates per story (relative) or per day (absolute).
-3. You `put` your updated csv file back into JIRA Tempo. This will update your timesheet for that sprint, also according to a parameter denoting your total amount of hours in that sprint.
+3. You `put` your updated csv file back into JIRA Tempo. This will update your timesheet for that sprint.
 
 Additionally you can `delete` all logged time for a sprint.  
 
@@ -40,10 +38,9 @@ python src/cli.py  get jira.textkernel.nl vanbelle:<password> -f myworklog.csv -
 
 Here we use the `get` action to get work log data, using parameter `-n` we get it from from *1* sprint back.  
 Using parameter `-b` we 
-get all the stories on the board with board ID *52*, and using parameter `-p` also those
+get all the stories on the board with board ID *52*<sup>[1](#myfootnote1)</sup>
+, and using parameter `-p` also those
 belonging to project ID *IH*.
-<sub>(If you don't know your board ID: it should be in the url of your JIRA board, e.g. `https://jira.textkernel.nl/secure/RapidBoard.jspa?rapidView=52`
-has board ID 52).  </sub>   
 Using parameter `-f` this is written to *myworklog.csv*.
 
 Example console output:
@@ -66,7 +63,7 @@ This can be done in 2 ways, absolute and relative:
 
 Floating point numbers are supported.
 
-Hours for the relative amounts will be distributed, over what is left from the absolute hours, and over the unique days that have a row in the sheet. You can have multiple rows with the same 'day' in the sheet.  
+Hours for the relative amounts will be distributed, over what is left from the absolute hours, and over the unique days that have a row in the sheet. So you can have multiple rows with the same 'day' in the sheet, though currently it's assumed you work 8 hours per day and logging more absolute hours per day may lead to unexpected results.
 You can remove all rows with a specific 'day' to not log anything on that day.  
 
 This results in a csv as the one in the file [myworklog.csv.put_example](myworklog.csv.put_example).
@@ -127,3 +124,8 @@ Are you sure you want to delete all worklogs for sprint with id 875 between Mon 
 It was 1 sprints back with sprint goal "Improved Match DE/FR ready to be released, ready to implement fully Match Templating".
 You logged 79.99 hours there.
 ```
+
+___
+
+<a name="myfootnote1">1</a>) The board ID can be found as a number in the url of your JIRA board, e.g. `https://jira.textkernel.nl/secure/RapidBoard.jspa?rapidView=52`
+has board ID 52
