@@ -1,0 +1,36 @@
+day,ID,descr (ignored),amount,in_hours,comment
+(ignored),IH-10,Recruitment | Candidate interviews and work on expending the team,0.1,False,<enter>
+(ignored),IH-11,Sick leave,<enter>,False,<enter>
+(ignored),IH-12,Circles,<enter>,False,<enter>
+(ignored),IH-13,Blocked by network issues | Use this task to log time where you are blocked because of network issues.,0.3,False,<enter>
+(ignored),IH-14,Jobtalk prep,<enter>,False,<enter>
+(ignored),IH-2,Holidays,<enter>,False,<enter>
+(ignored),IH-3,"Learning & Development (Training, Events, Onboarding) | Includes: * Conferences * Tradeshows * Trainings (e.g. at Textkernel) * Onboarding * Job talks, talking with your team lead, etc",1,False,<enter>
+(ignored),IH-4,"DO NOT USE: Personal Activities (Jobtalks, 1 on 1 internal meetings)",<enter>,False,<enter>
+(ignored),IH-5,"Team Activities (Planning, Group Internal Meetings) | *Instructions for Development teams:* Include team/group activities that take at least 30 mins: * Sprint planning * Backlog preparation * Demos * Retrospective * Meetings non JIRA related (e.g. design meeting about a topic not yet in JIRA) Do not include standups (standup time should be logged in the issue you are working on)",1.5,False,<enter>
+(ignored),IH-6,"Other | Fallback category: log here if your work is not covered by a Jira issue, non-development-related or any of the Internal hour epics. You can also log here activities covered by a JIRA story as long as they are 30 mins or less.",1.5,False,<enter>
+(ignored),IH-7,DO NOT USE: Internal projects - unspecified,<enter>,False,<enter>
+(ignored),IH-8,Public holiday / contract day off | Public holiday or regularly scheduled day off according to contract,<enter>,False,<enter>
+(ignored),IH-9,Dev teams: support | Include here time spent on support provided to other teams unless covered by a Jira support issue. You can also include here time of 30 mins or less spent on Jira support issues.,<enter>,False,<enter>
+(ignored),SRCHRD-349,ProServ: Job2CV improvements (V3+jobttitle keywords) in production for English customers | epic: Tuning in Production | AC: * As many as possible customers run the 2 improvements (V3 + jobtitle keywords),<enter>,False,<enter>
+(ignored),SRCHRD-437,Diversity in synonyms: implementation (Feb 11) | epic: Scoring optimizations | See design document: [https://docs.google.com/document/d/1kPktnycFhdEuNf8iOPt9P-kZCN66pNeZd0vAV3nbpFk/edit] Implement solution with minimal impact on Search,3,False,<enter>
+(ignored),SRCHRD-449,ProServ: CV2Job improvements in production for most customers | epic: Tuning in Production | AC: * As many as possible customers run the CV2Job improvements,<enter>,False,<enter>
+(ignored),SRCHRD-478,Hiring Data Scientist | epic: Recruitment | Review candidates.,1,False,<enter>
+(ignored),SRCHRD-484,"Rollout process for the new templating service | epic: TemplatingMatch | AC: * Know how the new service will fit in our current ecosystem? On short term? On long term? * How will it be deployed * How will it be configured by ProServ * If dependent on Textractor, what is the next step to get it out of there? What changes do we need to make? * How will ProServ know the template does what they expect? What is the support for the development stage of the templating? (e.g. produce the expected query on a given input)",1,False,<enter>
+(ignored),SRCHRD-497,Match Service: Align with jobfeed on API / Input | epic: TemplatingMatch | AC: * Understand current data flow/systems when doing Match from Jobfeed (e.g. do they use a SB account?). * Make sure new Match templating service supports an input API that can be easily used by Jobfeed * Should Match be in the middle for this?,<enter>,False,<enter>
+(ignored),SRCHRD-500,Align on templating language design | epic: TemplatingMatch | There are still a few unnatural choices in the templating language (e.g. referring to content via target when inheriting). We want to fix them so that the language is easy to use by ProServ use cases AC: * Align and update template language doc * Have examples for all those use cases,2,False,<enter>
+(ignored),SRCHRD-505,"Design way of avoiding dealing with true ""raw"" input | epic: TemplatingMatch | We dislike the raw input sources, since you can input here a lot hacky stuff. This also feels to break the concept of a JSON style structured config. Then we could instead also allow the entire template to be specified as a single string with placeholders. → Henning makes design of different types of queries (per data type of Search: interval/string/geo/date) to deal with raw input types. We should check how much work this is",0.5,False,<enter>
+(ignored),SRCHRD-510,"Robert Half part 2: French and German Match ready (without RH data) | epic: Job2CV 2018 in DE,FR,NL | AC: * Improved Match for DE/FR in master",3,False,<enter>
+(ignored),SRCHRD-513,,1,False,<enter>
+(ignored),SRCHRD-518,Design for reapplying ONLY Match models approved by ProServ + Integrations | epic: Tuning in Production,0.5,False,<enter>
+Mon 04-02-2019,<enter>,(ignored),8,True,<enter>
+Tue 05-02-2019,IH-3,(ignored),8,True,<enter>
+Wed 06-02-2019,IH-3,(ignored),8,True,<enter>
+Thu 07-02-2019,<enter>,(ignored),8,True,<enter>
+Fri 08-02-2019,<enter>,(ignored),8,True,<enter>
+Mon 11-02-2019,<enter>,(ignored),8,True,<enter>
+Tue 12-02-2019,<enter>,(ignored),8,True,<enter>
+Wed 13-02-2019,<enter>,(ignored),8,True,<enter>
+Thu 14-02-2019,<enter>,(ignored),8,True,<enter>
+Fri 15-02-2019,<enter>,(ignored),8,True,<enter>
+,,,,,
