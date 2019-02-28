@@ -41,7 +41,7 @@ python src/cli.py  get jira.textkernel.nl vanbelle:<password> -f myworklog.csv -
 Here we use the `get` action to get work log data, using parameter `-n` we get it from from *1* sprint back.  
 Using parameter `-b` we 
 get all the stories on the board with board ID *52*, and using parameter `-p` also those
-belonging to project ID *IH*.   
+belonging to project ID *IH*.
 <sub>(If you don't know your board ID: it should be in the url of your JIRA board, e.g. `https://jira.textkernel.nl/secure/RapidBoard.jspa?rapidView=52`
 has board ID 52).  </sub>   
 Using parameter `-f` this is written to *myworklog.csv*.
