@@ -44,16 +44,16 @@ jira_host = args.jira_host
 credentials = args.credentials
 
 if action == 'get' or action == 'delete':
-  if args.n == None:
+  if args.n is None:
     raise ValueError("Missing parameter -n: Nr. sprints back")
   elif args.n < 0:
     raise ValueError("Parameter -n has to be 0 or a positive number")
-  if args.b == None:
+  if args.b is None:
     raise ValueError("Missing parameter -b: Board ID")
-  if args.f == None:
+  if args.f is None:
     args.f = 'worklog.csv'
 if action == 'put':
-  if args.f == None:
+  if args.f is None:
     raise ValueError("Missing parameter -f: input csv file")
 
 # try to resolve host
