@@ -1,4 +1,5 @@
-Tictempoc
+Tic Tac Tempo
+
 ==
 
 
@@ -23,8 +24,8 @@ pip install -r requirements.txt
 General usage is 
 
 1. You first `get` a .csv file for a sprint. This will contain relevant stories, based on board ID & project IDs. 
-2. Using a csv editor, in this csv file you put your time estimates per story (relative) or per day (absolute)
-3. You `put` your updated csv file back into JIRA Tempo. This will update your timesheet for that sprint.  
+2. Using a csv editor, in this csv file you put your time estimates per story (relative) or per day (absolute).
+3. You `put` your updated csv file back into JIRA Tempo. This will update your timesheet for that sprint, also according to a parameter denoting your total amount of hours in that sprint.
 
 Additionally you can `delete` all logged time for a sprint.  
 
