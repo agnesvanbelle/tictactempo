@@ -123,6 +123,9 @@ def read_info_from_csv(inputfile):
   with open(inputfile, 'r') as fi:
     fi.readline()
     for line in fi:
+      line = line.strip()
+      if len(line.replace(TimeRow.separator, '')) == 0:
+        continue
       datetime_day = TimeRow.datetime_from_row(line)
       wl = TimeRow.worklog_from_row(line)
       if datetime_day != None:
